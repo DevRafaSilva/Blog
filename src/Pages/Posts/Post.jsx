@@ -71,7 +71,6 @@ const Post = () => {
         <Box component="div">
           <Titulo text={dados.post_title} />
           <Box
-            key={dados.ID}
             sx={{
               fontFamily: 'Helvetica',
               textAlign: 'left',
@@ -82,8 +81,10 @@ const Post = () => {
             component="p"
           >
             {dados.conteudo &&
-              dados.conteudo.conteudo.map((conteudo) => (
-                <p style={{ display: 'block' }}>{conteudo}</p>
+              dados.conteudo.conteudo.map((conteudo, index) => (
+                <p key={index} style={{ display: 'block' }}>
+                  {conteudo}
+                </p>
               ))}
           </Box>
           <img

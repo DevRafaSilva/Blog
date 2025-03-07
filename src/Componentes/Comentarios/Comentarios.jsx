@@ -1,22 +1,22 @@
+import { Box } from '@mui/material';
 import React from 'react';
 
 const Comentarios = ({ id }) => {
-  const [comentario, setComentario] = React.useState([]);
+  const [comentarioPost, setComentarioPost] = React.useState([]);
+  console.log(id);
 
   React.useEffect(() => {
     async function getComentarios() {
       try {
         const response = await fetch(
-          `https://joebio.xyz/wp-json/api/comentario?post_id=${id}`,
+          `https://joebio.xyz/wp-json/api/comentario?post_id='verificando'`,
           {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
           },
         );
         const dados = await response.json();
-        setComentario(dados);
+        console.log(dados);
+        setComentarioPost(dados);
         console.log(dados);
       } catch (error) {
         console.error('Erro ao buscar comentários:', error);
@@ -26,17 +26,17 @@ const Comentarios = ({ id }) => {
     getComentarios();
   }, [id]);
 
-  console.log(comentario);
-
-  return (
-    <div>
-      {comentario.map((comentario, index) => (
-        <div key={index}>
-          <p>{comentario.comment_content}</p>
-        </div>
-      ))}
-    </div>
-  );
+  if (comentarioPost) {
+    return (
+      <Box component="div">
+        {comentarioPost.map((comentario, index) => (
+          <Box key={index}>
+            <p>{comentario.comment_content}</p>
+          </Box>
+        ))}
+      </Box>
+    );
+  }
 };
 
 export default Comentarios;

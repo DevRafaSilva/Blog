@@ -4,7 +4,7 @@ import Grid2 from '@mui/material/Grid2';
 import { Box } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-import ChipsComponete from '../../componentes/Chips/ChipsComponente';
+import ChipsComponete from '../../Componentes/Chips/Chips';
 import CardPost from '../../Componentes/CardPost/CardPost';
 const Home = () => {
   const [search, setSearch] = React.useState('');
@@ -74,7 +74,10 @@ const Home = () => {
           }}
           spacing={4}
         >
-          {dados && dados.map((post) => <CardPost posts={post}></CardPost>)}
+          {dados &&
+            dados.map((post) => (
+              <CardPost key={post.ID} posts={post}></CardPost>
+            ))}
         </Grid2>
       </>
     );
