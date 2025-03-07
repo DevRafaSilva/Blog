@@ -1,7 +1,7 @@
 import React from 'react';
 import Chip from '@mui/material/Chip';
 import { styled } from '@mui/material';
-const Chips = ({ text }) => {
+const ChipsComponente = ({ text }) => {
   const ChipStyled = styled(Chip)(({ target }) => ({
     '&:hover': {
       backgroundColor: '#1b5e20',
@@ -21,4 +21,4 @@ const Chips = ({ text }) => {
   );
 };
 
-export default Chips;
+export default ChipsComponente;
