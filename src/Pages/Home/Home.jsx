@@ -4,7 +4,7 @@ import Grid2 from '@mui/material/Grid2';
 import { Box } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-import Chips from '../../componentes/Chips/ChipsComponente';
+import ChipsComponete from '../../componentes/Chips/ChipsComponente';
 import CardPost from '../../Componentes/CardPost/CardPost';
 const Home = () => {
   const [search, setSearch] = React.useState('');
@@ -47,18 +47,18 @@ const Home = () => {
               direction="row"
               spacing={1}
             >
-              <Chips text="Animais" />
-              <Chips text="Passáros" />
-              <Chips text="Curiosidades" />
-              <Chips text="Vida máritima" />
+              <ChipsComponete text="Animais" />
+              <ChipsComponete text="Passáros" />
+              <ChipsComponete text="Curiosidades" />
+              <ChipsComponete text="Vida máritima" />
             </Stack>
             <Stack
               sx={{ display: 'flex', mt: 2, justifyContent: 'center' }}
               direction="row"
               spacing={1}
             >
-              <Chips text="Animais" />
-              <Chips text="Passáros" />
+              <ChipsComponete text="Animais" />
+              <ChipsComponete text="Passáros" />
             </Stack>
           </Box>
         </Box>
