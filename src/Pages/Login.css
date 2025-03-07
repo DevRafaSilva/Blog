@@ -1,0 +1,42 @@
+.inputDiv{
+  position: relative;
+
+}
+
+.iconeInput{
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+input{
+  padding-right: 60px !important;
+}
+
+.inputDiv input{
+  width: 100%;
+}
+
+.password{
+  top: 45px;
+}
+
+.LinkLogin{
+  width: fit-content;
+  font-size: 18px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.LinkLogin:hover{
+  cursor: pointer;
+  color: #64b5f6;
+}
+
+.criar:hover:after{
+  content: '';
+  width: 230px;
+  display: block;
+  height: 2px;
+  background-color: #e3f2fd;
+}

@@ -1,0 +1,14 @@
+.emailIcone{
+  top: 45px;
+  position: absolute;
+  right: 20px;
+}
+
+.emailInput{
+  position: relative;
+}
+
+.criar::after{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100px;
+}
