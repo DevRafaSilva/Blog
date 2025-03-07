@@ -9,7 +9,7 @@ const Comentarios = ({ id }) => {
     async function getComentarios() {
       try {
         const response = await fetch(
-          `https://joebio.xyz/wp-json/api/comentario?post_id='verificando'`,
+          `https://joebio.xyz/wp-json/api/comentario?post_id='${id}'`,
           {
             method: 'GET',
           },
